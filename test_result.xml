@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="5" time="0.122" timestamp="2022-03-29T13:02:31.145332" hostname="DESKTOP-0BTIHAR"><testcase classname="test_PrimeorNot" name="test_prime[3-True]" time="0.001" /><testcase classname="test_PrimeorNot" name="test_prime[4-False]" time="0.001" /><testcase classname="test_PrimeorNot" name="test_prime[1-True]" time="0.002"><failure message="assert False == True">a = 1, b = True
+
+    @pytest.mark.parametrize("a, b", [(3, True), (4, False), (1, True), (20, False), (11, False)])
+    def test_prime(a,b):
+        result = PrimeorNot.checkPrime(a)
+&gt;       assert result == b
+E       assert False == True
+
+test_PrimeorNot.py:8: AssertionError</failure></testcase><testcase classname="test_PrimeorNot" name="test_prime[20-False]" time="0.001" /><testcase classname="test_PrimeorNot" name="test_prime[11-False]" time="0.001"><failure message="assert True == False">a = 11, b = False
+
+    @pytest.mark.parametrize("a, b", [(3, True), (4, False), (1, True), (20, False), (11, False)])
+    def test_prime(a,b):
+        result = PrimeorNot.checkPrime(a)
+&gt;       assert result == b
+E       assert True == False
+
+test_PrimeorNot.py:8: AssertionError</failure></testcase></testsuite></testsuites>
